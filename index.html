@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <title>File Surfer</title>
+    <meta name="title" content="File Surfer" />
+    <meta name="description" content="Open Directory Search Tool" />
+    <meta
+      name="keywords"
+      content="open directory search, google dorks, advanced google searching, google dorks" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Joe Stasik" />
+    <meta name="contact" content="jostasik@outlook.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/searchstyle.css" />
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8BWQDGE068"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "G-8BWQDGE068")
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-sm pt-0 pb-0 bg-dark navbar-dark ps-auto">
+        <div class="container text-white-50">
+          <a class="navbar-brand" href="index.html">joe stasik</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Projects</a
+                >
+                <ul
+                  class="dropdown-menu text-center bg-dark"
+                  aria-labelledby="navbarDropdownMenuLink">
+                  <li>
+                    <a class="dropdown-item text-white-50" href="/dominos/"
+                      >Domino's Franchise Map</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white-50" href="/filesurfer/"
+                      >File Surfer</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item text-white-50"
+                      href="https://github.com/jostasik/Flowgorithm-MacOS"
+                      >Flowgorithm</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/jostasik"
+                  >Github</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/404.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="particles-js" class="container-fluid"></div>
+    <div id="filesurfer" class="container col-12">
+      <h1>File Surfer</h1>
+      <form name="menufrm">
+        <div class="form-group mx-auto">
+          <div
+            class="form-control mx-auto my-3 w-75 d-flex justify-content-around bg-dark text-light">
+            <div>
+              <input
+                type="checkbox"
+                id="fileTypeAudio"
+                name="filetype"
+                value="%2B(.ogg|.mp3|.flac|.wma|.m4a|.flac|.alac|.ape|.aac))" />
+              <label for="fileTypeAudio">Audio</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="fileTypeDocs"
+                name="filetype"
+                value="%2B(.doc|.docx|.md|.odt|.pages|.pdf|.rtf|.sxw|.tiff|.txt.MOBI|.EPUB|.PDF|.MOBI|.EPUB)" />
+              <label for="fileTypeDocs">Docs</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="fileTypeImages"
+                name="filetype"
+                value="%2B(.jpg|.gif|.png|.tif|.tiff|.psd)" />
+              <label for="fileTypeImages">Images</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="fileTypeVideos"
+                name="filetype"
+                value="%2B(.mkv|.mp4|.avi|.mov|.mpg|.wmv)" />
+              <label for="fileTypeVideos">Videos</label>
+            </div>
+          </div>
+          <div class="form-group my-3 mx-auto w-75">
+            <label for="searchString">Search:</label>
+            <input
+              class="form-control bg-dark text-light"
+              id="searchString"
+              name="string"
+              size="30"
+              type="text" />
+          </div>
+          <button
+            class="btn btn-primary bg-dark"
+            onclick="createsearch();return false;"
+            type="submit">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
