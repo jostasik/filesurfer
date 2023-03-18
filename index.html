@@ -9,9 +9,7 @@
     <title>File Surfer</title>
     <meta name="title" content="File Surfer" />
     <meta name="description" content="Open Directory Search Tool" />
-    <meta
-      name="keywords"
-      content="open directory search, google dorks, advanced google searching, google dorks" />
+    <meta name="keywords" content="open directory search, google dorks, advanced google searching, google dorks" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
@@ -27,9 +25,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8BWQDGE068"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BWQDGE068"></script>
     <script>
       window.dataLayer = window.dataLayer || []
       function gtag() {
@@ -38,17 +34,26 @@
       gtag("js", new Date())
 
       gtag("config", "G-8BWQDGE068")
+    </script> -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : ""
+        j.async = true
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, "script", "dataLayer", "GTM-N5KX4DS")
     </script>
   </head>
 
   <body>
     <header>
-      <nav
-        class="navbar navbar-expand-sm pt-0 pb-0 bg-dark navbar-dark ps-auto">
+      <nav class="navbar navbar-expand-sm pt-0 pb-0 bg-dark navbar-dark ps-auto">
         <div class="container text-white-50">
-          <a class="navbar-brand" href="https://jostasik.com/"
-            >joe stasik</a
-          >
+          <a class="navbar-brand" href="https://jostasik.com/">joe stasik</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -62,50 +67,26 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
                   >Projects</a
                 >
-                <ul
-                  class="dropdown-menu text-center bg-dark"
-                  aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu text-center bg-dark" aria-labelledby="navbarDropdownMenuLink">
                   <li>
-                    <a
-                      class="dropdown-item text-white-50"
-                      href="https://jostasik.com/dominos/"
-                      >Domino's Franchise Map</a
-                    >
+                    <a class="dropdown-item text-white-50" href="https://jostasik.com/dominos/">Domino's Franchise Map</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white-50"
-                      href="https://jostasik.com/filesurfer/"
-                      >File Surfer</a
-                    >
+                    <a class="dropdown-item text-white-50" href="https://jostasik.com/filesurfer/">File Surfer</a>
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item text-white-50"
-                      href="https://github.com/jostasik/Flowgorithm-MacOS"
-                      >Flowgorithm</a
-                    >
+                    <a class="dropdown-item text-white-50" href="https://github.com/jostasik/Flowgorithm-MacOS">Flowgorithm</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com/jostasik"
-                  >Github</a
-                >
+                <a class="nav-link" href="https://github.com/jostasik">Github</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://jostasik.com/404"
-                  >About</a
-                >
+                <a class="nav-link" href="https://jostasik.com/404">About</a>
               </li>
             </ul>
           </div>
@@ -117,14 +98,9 @@
       <h1>File Surfer</h1>
       <form name="menufrm">
         <div class="form-group mx-auto">
-          <div
-            class="form-control mx-auto my-3 w-75 d-flex justify-content-around bg-dark text-light">
+          <div class="form-control mx-auto my-3 w-75 d-flex justify-content-around bg-dark text-light">
             <div>
-              <input
-                type="checkbox"
-                id="fileTypeAudio"
-                name="filetype"
-                value="%2B(.ogg|.mp3|.flac|.wma|.m4a|.flac|.alac|.ape|.aac))" />
+              <input type="checkbox" id="fileTypeAudio" name="filetype" value="%2B(.ogg|.mp3|.flac|.wma|.m4a|.flac|.alac|.ape|.aac))" />
               <label for="fileTypeAudio">Audio</label>
             </div>
             <div>
@@ -136,37 +112,19 @@
               <label for="fileTypeDocs">Docs</label>
             </div>
             <div>
-              <input
-                type="checkbox"
-                id="fileTypeImages"
-                name="filetype"
-                value="%2B(.jpg|.gif|.png|.tif|.tiff|.psd)" />
+              <input type="checkbox" id="fileTypeImages" name="filetype" value="%2B(.jpg|.gif|.png|.tif|.tiff|.psd)" />
               <label for="fileTypeImages">Images</label>
             </div>
             <div>
-              <input
-                type="checkbox"
-                id="fileTypeVideos"
-                name="filetype"
-                value="%2B(.mkv|.mp4|.avi|.mov|.mpg|.wmv)" />
+              <input type="checkbox" id="fileTypeVideos" name="filetype" value="%2B(.mkv|.mp4|.avi|.mov|.mpg|.wmv)" />
               <label for="fileTypeVideos">Videos</label>
             </div>
           </div>
           <div class="form-group my-3 mx-auto w-75">
             <label for="searchString">Search:</label>
-            <input
-              class="form-control bg-dark text-light"
-              id="searchString"
-              name="string"
-              size="30"
-              type="text" />
+            <input class="form-control bg-dark text-light" id="searchString" name="string" size="30" type="text" />
           </div>
-          <button
-            class="btn btn-primary bg-dark"
-            onclick="createsearch();return false;"
-            type="submit">
-            Search
-          </button>
+          <button class="btn btn-primary bg-dark" onclick="createsearch();return false;" type="submit">Search</button>
         </div>
       </form>
     </div>
@@ -175,5 +133,8 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"></script>
     <script src="js/search.js"></script>
+    <noscript
+      ><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5KX4DS" height="0" width="0" style="display: none; visibility: hidden"></iframe
+    ></noscript>
   </body>
 </html>
